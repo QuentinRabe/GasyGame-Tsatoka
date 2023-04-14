@@ -1,0 +1,11 @@
+{
+    "extends": "@tsconfig/recommended/tsconfig.json",
+    "include" : ["src/**/*"],
+    "exclude" : ["node_modules", "css", "img", "media", "index.html"],
+    "compilerOptions": {
+        "lib": ["ES2022", "DOM"],
+        "target": "ES5",
+        "module": "esnext",
+        "outDir": "js"
+    }
+}

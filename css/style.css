@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Knewave, sans-serif;
+    background-color: #f8ffe5;
+    overflow: hidden;
+}
+
+.guess-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guess {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 4rem;
+    color: #1b9aaa;
+
+}
+
+.guess .letter {
+    text-shadow: 1px 1px 3px #1b9aaa;
+}
+
+.choices {
+    padding: 3rem;
+
+}
+
+.choices ul{
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.choices li {
+    list-style: none;
+    width: 5rem;
+    font-size: 3rem;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    background-color: #ef476f;
+    color: #f8ffe5;
+    cursor: pointer;
+}
+
+.choices .hidden {
+    opacity: 0.5;
+    background-color: #d499a7;
+    color: #f8ffe5;
+
+
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100vh;
+}
+
+.hangman {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: span 2;
+}
+
+.choices {
+
+    grid-column: span 3;
+
+}
+
+
+.guess-container {
+
+    grid-column: span 3;
+
+}
+
+.fullscreen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+dialog {
+    max-width: inherit;
+    max-height: inherit;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog button {
+    all: unset;
+    background-color: #ef476f;
+    color: #f8ffe5;
+    padding: .4rem .6rem;
+    border-radius: 10px;
+    font-size: 3rem;    
+}
+
+dialog .hidden {
+    display: none;
+}
+
+.word {
+    color: #1b9aaa;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+     grid-template-columns: repeat(1, 1fr);
+     grid-template-rows: repeat(6, 1fr);   
+    }
+    .hangman {
+        grid-column: 1;
+        grid-row: span 4;
+        grid-row-end: -1;
+    }
+    
+    .guess-container {
+        grid-column: 1;
+        font-size: 4rem;
+    }
+
+    .guess {
+        font-size: 1.5rem;
+    }
+
+    .choices {
+        grid-column: 1;
+    }
+
+}
